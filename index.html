@@ -9,20 +9,28 @@
 </head>
 <body>
   <div class="card">
+    
+    
 
     <div class="inputForm">
       <div class="title">
          <h2>Mortgage Calculator</h2>
-         <button>Clear All</button>
+         <button class="clear-all" onclick="clear()">Clear All</button>
       </div>
 
       <form>
         <div class="for-mortgage-amount">
                     <label>Mortgage Amount</label>
-                  <div class="inputMortgageAmount">
+                <div class="mortgageAmountContainer">
+                  <div class="inputMortgageAmount" >
                       <p>£</p>
                       <input class= "mortgageAmount" type="text" placeholder="Please input the Mortgage Amount" required>
+                
+                      
                   </div>
+                </div>
+                    <p class="mortgage-amount-error">Please enter a valid number!</p>
+                  
         </div>
         
         <div>
@@ -30,19 +38,27 @@
 
             <div class="for-mortgage-term">
                        <label>Mortgage Term</label>
+                    <div class="mortgageTermBorderContainer">
                       <div class="mortgageTermInput">
                         <input class = "mortgageTerm" type="text" required>
                         <p>years</p>
-                      </div> 
+                      </div>
+                    </div> 
+                      <p class="mortgage-term-error">Please enter a valid number!</p>
+                  
             </div>
 
 
             <div class="for-interest-rate">
                     <label>Interest Rate</label>
+                <div class="interestRateBorderCointainer">
                   <div class="interestRateInput">
                       <input class = "interestRate" type="text" required>
                       <p>%</p>
                   </div>
+                </div>
+                  <p class="interest-rate-error">Please enter a valid number!</p>
+                  
                   </div>
 
           </div>
@@ -51,16 +67,22 @@
             <p>
                 Mortgage Type
             </p>
-
+          <div class="optionBorderCointainer">
             <div class="options" >
-              <input type="radio" name="mortgageType" value="repayment" required >
+              <input type="radio" class="mortgage-type" name="mortgageType" value="repayment" required >
               <p>Repayment</p>
             </div>
+          </div>
+
+          <div class="optionBorderCointainer">
             <div class="options">
-              <input type="radio" name="mortgageType" value="interestOnly"  required>
+              <input type="radio" class="mortgage-type" name="mortgageType" value="interestOnly"  required>
               <p>Interest Only</p>
             </div>
+          </div>
+            
           </div>  
+          <p class="radio-error">Plese choose your mortgage type!</p>
           <button type = "button" class="calculate-btn">Calculate Repayments</button>
           
 
@@ -69,6 +91,14 @@
       </form>
       
       
+    </div>
+
+    <div class="default-result">
+      <img src="illustration-empty.svg">
+      <p>Results shown here</p>
+      <p>Complete the form and click "Calculate Repayments" to see what your monthly repayments would be.</p>
+      
+
     </div>
 
 
@@ -92,7 +122,7 @@
       
 
     </div>
-
+  </div>
   </div>
 
 
